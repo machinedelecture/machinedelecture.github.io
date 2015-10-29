@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sur la lecture</title>
+		<link rel="stylesheet" href="style.css"></style>
+		<link rel="stylesheet" href="print.css" type="text/css" media="print" />
+		<script src="libraries/p5.js" type="text/javascript"></script>
+		<!-- Uncomment the lines below to include extra p5 libraries -->
+		<script src="libraries/p5.dom.js" type="text/javascript"></script>
+		<script src="sketch.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<div id="GUI">
+			<ul id="menu-gauche">
+				<li id="popUpLeft">
+					<div id="croix-gauche" onclick="afficheTuto()">x</div>
+					<div id="contenu-gauche">
+						
+					</div>
+					<div id="gauche-precedent" onclick="contenuGauche('precedent')">< préc.</div>
+					<div id="gauche-suivant" onclick="contenuGauche('suivant')">suiv. ></div>
+				</li>
+				<li id="menuTuto" onclick="afficheTuto()" onmouseover="legendeG('Tutoriel')" onmouseout="legendeG('')"></li>
+				<li id="texteGauche"></li>
+			</ul>
+			<ul id="menu-droite">
+				<li id="popUpRight">
+					<div id="croix-droite" onclick="afficheChanger()">x</div>
+					<b>choix du texte</b><br/><br/>
+					<div id="proust" class="livre" onclick="textChoice('lecture')">
+						<b><i>Sur la Lecture</i>, 1906<br/></b>
+						Marcel Proust
+					</div>
+					<div id="flatland" class="livre" onclick="textChoice('flatland')">
+						<b><i>Flatland</i>, 1884<br/></b>
+						Edwin Abbott Abbott
+					</div>
+					<div id="pensees" class="livre" onclick="textChoice('pensees')">
+						<b><i>Pensées</i>, 1669<br/></b>
+						Blaise Pascal
+					</div>
+				</li>
+				<li id="menuActualiser" OnClick="javascript:window.location.reload()" onmouseover="legendeD('Recommencer la sélection')" onmouseout="legendeD('')"></li>
+				<li id="menuChanger" onclick="afficheChanger()" onmouseover="legendeD('Changer de texte')" onmouseout="legendeD('')"></li>
+				<li id="menuPrint" onclick="printAffiche()" onmouseover="legendeD('Imprimer')" onmouseout="legendeD('')"></li>
+				<li id="texteDroite"></li>
+			</ul>
+		</div>
+		<div id="enTete">
+		
+		</div>
+		<div id="corpsTexte">
+		</div>
+		<div id="impression">
+			<div id="footer"><b>Sur la lecture</b><br/>Marcel Proust - 1906<br/>Extraits selectionés le 18/10/2015<br/>à Saint-Étienne</div>
+			<div id="composition"></div>
+		</div>
+	</body>
+</html>

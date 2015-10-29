@@ -1,0 +1,23 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+@page{
+	height: 42cm;
+}
+
+#GUI, #enTete ,#corpsTexte{
+  display : none;
+}
+
+#impression{
+	position: absolute;
+	margin-left:0;
+	height: 10px;
+	width:10px;
+}
+
+.articles{
+	padding: 5px;
+}
